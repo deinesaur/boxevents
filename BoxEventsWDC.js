@@ -7,17 +7,12 @@
 
             tableau.connectionName = "Box Events";  
 
-            //store the form data because the submit causes it to disappear
+            //store the devToken as a global var
             var devToken = $('#developertoken').val();
             tableau.connectionData = JSON.stringify(devToken);
             tableau.submit();
     };
-
-    //capture developer token from HTML input
-    //
-    //document.getElementById("developertoken").value
     
-
     //set up schema to map in data
     myConnector.getSchema = function (schemaCallback) {
     //declare column formatting, alias, and datatypes
