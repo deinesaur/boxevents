@@ -45,7 +45,7 @@
       "url": "https://api.box.com/2.0/events",
       "method": "GET",
       "headers": {
-        "Authorization": "Bearer KXnWzmZpqAvzMxZEGlOVUbKO9QDPL6Zj",
+        "Authorization": "Bearer 0YHltQAkAXjMN2x1bA4yho7DM5bykmZw",
         "cache-control": "no-cache",
         "Postman-Token": "a44dec9b-2eae-4ea2-ac57-da03fee67366"
       }
