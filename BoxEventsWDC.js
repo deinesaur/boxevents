@@ -60,21 +60,21 @@
         console.log(tableau.connectionData);
 
     //define the GET request to Box Events API
-	var settings = {
-	  "async": true,
-	  "crossDomain": true,
-	  "url": "https://api.box.com/2.0/events?stream_type=admin_logs&limit=300",
-	  "method": "GET",
-	  "headers": {
-	    "Authorization": "Bearer "+ devToken,
-	    "cache-control": "no-cache",
-	    "Postman-Token": "dfa8a61a-5bd3-4faa-83c7-a3e5ec278fae"
-	  }
-	};
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://api.box.com/2.0/events?stream_type=admin_logs&limit=500",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer "+ devToken,
+        "cache-control": "no-cache",
+        "Postman-Token": "a44dec9b-2eae-4ea2-ac57-da03fee67366"
+      }
+    }
 
     //call the API
     $.ajax(settings).done(function (response) {
-      // console.log(response);
+      console.log(response);
     
     //map the response events in to the columns of the table object
     var ent = response.entries,
