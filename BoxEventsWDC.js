@@ -36,11 +36,13 @@
         id: "type",
         alias: "Event Type",
         dataType: tableau.dataTypeEnum.string
-        }, {
-        id: "name",
-        alias: "User Name",
-        dataType: tableau.dataTypeEnum.string
-        }];
+        }
+        // , {
+        // id: "name",
+        // alias: "User Name",
+        // dataType: tableau.dataTypeEnum.string
+        // }
+        ];
 
     //put columns in to table variable
     var tableSchema = {
@@ -63,7 +65,7 @@
     var settings = {
 	  "async": true,
 	  "crossDomain": true,
-	  "url": "https://api.box.com/2.0/events?stream_type=admin_logs&limit=300",
+	  "url": "https://api.box.com/2.0/events?stream_type=admin_logs&limit=500",
 	  "method": "GET",
 	  "headers": {
 	    "Authorization": "Bearer " + devToken,
@@ -88,7 +90,7 @@
                     "login": ent[i].created_by.login,
                     "created_at": ent[i].created_at,
                     "type": ent[i].event_type,
-                    "name": ent[i].source.name
+                    // "name": ent[i].source.name
                 });
             };
             //add rows of data to the table
