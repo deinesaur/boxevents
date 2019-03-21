@@ -63,7 +63,7 @@
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://api.box.com/2.0/events?stream_type=admin_logs&limit=500",
+      "url": "https://api.box.com/2.0/events?stream_type=admin_logs",
       "method": "GET",
       "headers": {
         "Authorization": "Bearer "+ devToken,
@@ -82,21 +82,20 @@
 
             // Iterate over the JSON object response
             for (var i = 0, len = ent.length; i < len; i++) {
-
                 tableData.push({
                     "event_id": ent[i].event_id,
                     "name": ent[i].created_by.name,
                     "login": ent[i].created_by.login,
                     "created_at": ent[i].created_at,
-                    "type": ent[i].event_type
+                    "type": ent[i].event_type,
+                    "docname": ent[i].source.name
                 });
-
+            };
             //add rows of data to the table
             table.appendRows(tableData);
             doneCallback();
-        };
-    });
-  };
+        });
+    };
 
     //tableau magic command
     tableau.registerConnector(myConnector);
