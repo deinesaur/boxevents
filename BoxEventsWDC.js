@@ -31,7 +31,7 @@
         }, {
         id: "created_at",
         alias: "Event Created",
-        dataType: tableau.dataTypeEnum.datetime
+        dataType: tableau.dataTypeEnum.string
         }, {
         id: "type",
         alias: "Event Type",
