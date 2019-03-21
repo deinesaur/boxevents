@@ -21,8 +21,8 @@
         alias: "Event Id",
         dataType: tableau.dataTypeEnum.string
         }, {
-        id: "name",
-        alias: "User Name",
+        id: "account",
+        alias: "User Account",
         dataType: tableau.dataTypeEnum.string
         }, {
         id: "login",
@@ -37,8 +37,8 @@
         alias: "Event Type",
         dataType: tableau.dataTypeEnum.string
         }, {
-        id: "docname",
-        alias: "Document Name",
+        id: "name",
+        alias: "User Name",
         dataType: tableau.dataTypeEnum.string
         }];
 
@@ -84,11 +84,11 @@
             for (var i = 0, len = ent.length; i < len; i++) {
                 tableData.push({
                     "event_id": ent[i].event_id,
-                    "name": ent[i].created_by.name,
+                    "account": ent[i].created_by.name,
                     "login": ent[i].created_by.login,
                     "created_at": ent[i].created_at,
                     "type": ent[i].event_type,
-                    "docname": ent[i].source.name
+                    "name": ent[i].source.name
                 });
             };
             //add rows of data to the table
