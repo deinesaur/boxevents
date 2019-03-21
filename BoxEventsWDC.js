@@ -61,16 +61,16 @@
 
     //define the GET request to Box Events API
     var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://api.box.com/2.0/events?stream_type=admin_logs",
-      "method": "GET",
-      "headers": {
-        "Authorization": "Bearer "+ devToken,
-        "cache-control": "no-cache",
-        "Postman-Token": "a44dec9b-2eae-4ea2-ac57-da03fee67366"
-      }
-    }
+	  "async": true,
+	  "crossDomain": true,
+	  "url": "https://api.box.com/2.0/events?stream_type=admin_logs&limit=300",
+	  "method": "GET",
+	  "headers": {
+	    "Authorization": "Bearer " + devToken,
+	    "cache-control": "no-cache",
+	    "Postman-Token": "14b75a03-0884-4bb0-8a9a-f0bf96c2ea7d"
+	  }
+	}
 
     //call the API
     $.ajax(settings).done(function (response) {
